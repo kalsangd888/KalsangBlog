@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="bo">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>མཁན་པོ་སྐལ་བཟང་དོན་གྲུབ་ཀྱི་དྲ་ཚིགས།</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tibetan:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans Tibetan', sans-serif;
+            line-height: 1.8;
+            background-color: #f8fafc;
+        }
+        .tibetan-text {
+            line-height: 2.2;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+        /* Custom scrollbar for long text */
+        .bio-scroll {
+            max-height: 600px;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+        .bio-scroll::-webkit-scrollbar {
+            width: 4px;
+        }
+        .bio-scroll::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+        /* Profile Image Container */
+        .profile-img-container {
+            width: 180px; /* Reduced width */
+            height: 180px; /* Square shape */
+            margin: 0 auto 1.5rem auto;
+            overflow: hidden;
+            border-radius: 1rem;
+            border: 4px solid #f1f5f9;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header / Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-800">
+                <a href="#">སྐལ་བཟང་དོན་གྲུབ།</a>
+            </div>
+            <div class="hidden md:flex space-x-8 text-lg">
+                <a href="#home" class="hover:text-blue-600 transition">གཙོ་ངོས།</a>
+                <a href="#articles" class="hover:text-blue-600 transition">རྩོམ་ཡིག།</a>
+                <a href="#about" class="hover:text-blue-600 transition">ངོ་སྤྲོད།</a>
+                <a href="#contact" class="hover:text-blue-600 transition">འབྲེལ་གཏུག།</a>
+            </div>
+            <button class="md:hidden p-2" id="mobile-menu-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white py-20 px-6">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">བསམ་གཞིག་གི་གཤོག་པ།</h1>
+            <p class="text-xl md:text-2xl opacity-90 mb-10 max-w-2xl mx-auto">
+                མཁན་པོ་སྐལ་བཟང་དོན་གྲུབ་ཀྱི་སྒེར་གྱི་ཉམས་ཞིབ་དང་རྩོམ་ཡིག་གླེང་སྟེགས།
+            </p>
+            <a href="#articles" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full text-lg font-semibold transition inline-block">
+                རྩོམ་ཡིག་ཀློག་པ།
+            </a>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-3 gap-12">
+        
+        <!-- Articles List (Left 2 columns) -->
+        <div class="lg:col-span-2 space-y-10" id="articles">
+            <h2 class="text-3xl font-bold border-b-2 border-blue-500 pb-3 mb-8">རྩོམ་ཡིག་གསར་ཤོས་ཁག།</h2>
+
+            <!-- Article Card 1 -->
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="p-8">
+                    <div class="flex items-center text-sm text-gray-500 mb-3">
+                        <span>༢༠༢༤། ཟླ་ ༤། ཚེས་ ༢།</span>
+                        <span class="mx-2">•</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">ཉམས་ཞིབ།</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 hover:text-blue-700 cursor-pointer">བི་མ་ལ་མི་ཏྲའི་མཛད་རྗེས་ཉམས་ཞིབ་དང་འབྲེལ་བའི་དཔྱད་རྩོམ།</h3>
+                    <p class="text-gray-600 tibetan-text mb-6">
+                        སྔ་འགྱུར་རྙིང་མའི་ཞིབ་འཇུག་ལྟེ་གནས་ཁང་དུ་བྲིས་པའི་«བི་མ་ལ་མི་ཏྲའི་མཛད་རྗེས་ཉུལ་བ་»ཞེས་པའི་ཉམས་ཞིབ་ཀྱི་གལ་ཆེའི་རང་བཞིན་སྐོར་གླེང་བ།
+                    </p>
+                    <button class="text-blue-600 font-bold hover:underline flex items-center" onclick="showPost('བི་མ་ལ་མི་ཏྲའི་མཛད་རྗེས་ཉམས་ཞིབ་དང་འབྲེལ་བའི་དཔྱད་རྩོམ།')">
+                        མུ་མཐུད་ཀློག་པ། <span class="ml-2">→</span>
+                    </button>
+                </div>
+            </article>
+
+            <!-- Article Card 2 -->
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="p-8">
+                    <div class="flex items-center text-sm text-gray-500 mb-3">
+                        <span>༢༠༢༤། ཟླ་ ༣། ཚེས་ ༡༥།</span>
+                        <span class="mx-2">•</span>
+                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">རིག་གནས།</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 hover:text-blue-700 cursor-pointer">སྔ་འགྱུར་བའི་མདོ་རྒྱུད་བསྟན་བཅོས་འགྱུར་ཆོས་ཞིབ་འཇུག།</h3>
+                    <p class="text-gray-600 tibetan-text mb-6">
+                        བཀའ་མ་དང་རྒྱུད་སྡེའི་བསྟན་བཅོས་རྣམས་ཀྱི་འགྱུར་དང་འབྲེལ་བའི་དེང་རབས་ཉམས་ཞིབ་ཀྱི་ལམ་སྲོལ།
+                    </p>
+                    <button class="text-blue-600 font-bold hover:underline flex items-center" onclick="showPost('སྔ་འགྱུར་བའི་མདོ་རྒྱུད་བསྟན་བཅོས་འགྱུར་ཆོས་ཞིབ་འཇུག།')">
+                        མུ་མཐུད་ཀློག་པ། <span class="ml-2">→</span>
+                    </button>
+                </div>
+            </article>
+        </div>
+
+        <!-- Sidebar (Right 1 column) -->
+        <aside class="space-y-12">
+            <!-- About Me Sidebar -->
+            <div id="about" class="bg-white p-8 rounded-xl shadow-md border-t-4 border-blue-600">
+                <h3 class="text-xl font-bold mb-4 border-b pb-2">ངོ་སྤྲོད་མདོར་བསྡུས།</h3>
+                
+                <!-- Updated Profile Image with smaller size -->
+                <div class="profile-img-container">
+                    <!-- Note: Upload your new small photo as 'profile.jpg' on GitHub -->
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Kalsang" onerror="this.src='https://placehold.co/200x200?text=Profile+Photo'" alt="མཁན་པོ་སྐལ་བཟང་དོན་གྲུབ་ཀྱི་སྐུ་པར།" class="w-full h-full object-cover">
+                </div>
+                
+                <div class="bio-scroll text-gray-700 tibetan-text text-sm">
+                    <p class="mb-4 font-bold text-blue-900 text-center">མཁན་པོ་སྐལ་བཟང་དོན་གྲུབ།</p>
+                    <p class="mb-4">
+                        གུས་པ་སྐལ་བཟང་དོན་གྲུབ་ནི། ཕ་གོ་འཇོ་འདན་ཆུང་ཚང་པདྨ་དབང་ཕྱུག་དང་། མ་རོ་གོ་ཚང་ཚུལ་ཁྲིམས་སྒྲོལ་མ་གཉིས་ཀྱི་བུར། སྤྱི་ལོ་ ༡༩༨༦ ལོར་བསིལ་ལྡན་བོད་ཆེན་པོའི་དབུས་ཀྱི་ཆར་ལྷ་ལྡན་སྤྲུལ་པའི་ཡུལ་དུ་སྐྱེས། ལྷ་སའི་ཤར་ཕྱོགས་སློབ་ཆུང་དང་དྲིན་ཆེན་ཕ་རྒན་གྱི་དྲུང་ནས་འབྲི་ཀློག་སོགས་རྨང་གཞིའི་ཤེས་ཡོན་སྦྱངས།
+                    </p>
+                    <p class="mb-4">
+                        རང་ལོ་དགུར་སོན་སྐབས་དྲིན་ཆེན་རྩ་བའི་བླ་མ་༸སྐྱབས་རྗེ་བཀའ་དྲིན་མཚུངས་མེད་གྲུབ་དབང་ཡིད་བཞིན་ནོར་བུའི་ཞབས་ལ་གཏུགས་ཏེ་ཐེག་མཆོག་རྣམ་གྲོལ་བཤད་སྒྲུབ་དར་རྒྱས་གླིང་གི་ཆོས་སྒོར་ཞུགས། ལོ་བདུན་གྱི་རིང་ལ་གཞི་རིམ་སློབ་གྲྭ་དང་གྲྭ་ཚང་ལ་སློབ་གཉེར་བྱས། སྤྱི་ལོ་ ༢༠༠༢ ལོར་སྔ་འགྱུར་མཐོ་སློབ་མདོ་སྔགས་རིག་པའི་འབྱུང་གནས་གླིང་དུ་ཞུགས་ཏེ་རིམ་པས་ལོ་བཅུའི་རིང་སྦྱངས་པ་བྱས་ཤིང་སྤྱི་ལོ་ ༢༠༡༢ ལོར་བསླབ་པ་མཐར་སོན།
+                    </p>
+                    <p class="mb-4">
+                        ལོ་དེ་དག་གི་རིང་གཞུང་ཆེན་ཁག་ལ་སྦྱངས་པ་བྱེད་ཞོར་དུ་སྡེ་ཚན་ཁག་འགའ་ཞིག་གི་ལས་འགན་ལོ་མང་ཁུར་བ་དང་། ཁྱད་པར་ལོ་གཉིས་ཀྱི་རིང་བཤད་གྲྭའི་ནང་སྐྱོར་ཁྲིད་བྱས། དེ་རྗེས་ལོ་བཞིའི་རིང་དཔེ་ཁྲིད་དང་འཛིན་སྐྱོང་གི་འགན་ཁུར་དང་ལྷན་སྔ་འགྱུར་རིག་མཛོད་རྩིས་འཕྲུལ་སྡེ་ཚན་དང་། སྔ་འགྱུར་རིག་མཛོད་རྩོམ་སྒྲིག་ལྷན་ཁང་བཅས་སུ་འགན་འཛིན་གྱི་ལས་ཁུར་ཞུས།
+                    </p>
+                    <p class="mb-4">
+                        གཞན་ཡང་ཐེག་མཆོག་རྣམ་གྲོལ་བཤད་སྒྲུབ་དར་རྒྱས་གླིང་དུ་དགེ་འདུན་པ་གསར་ཞུགས་རྣམ་པའི་ངོས་སྦྱོར་ལག་འཁྱེར་གསར་བཟོ་སོགས་ཀྱི་ཞབས་ཞུ་མུ་མཐུད་དེ་ལོ་ངོ་བཅོ་ལྔ་ཙམ་གྱི་རིང་ལ་བསྒྲུབས། སྤྱི་ལོ་ ༢༠༡༦ ལོར་སྔ་འགྱུར་རྙིང་མའི་ཞིབ་འཇུག་ལྟེ་གནས་ཁང་དུ་ཞིབ་འཇུག་སློབ་མའི་གྲས་སུ་བདམས་ཐོན་བྱུང་སྟེ། སྤྱི་ལོ་ ༢༠༡༧ ལོ་ནས་དངོས་གཞི་ཞིབ་འཇུག་པའི་ངོ་བོའི་ཐོག་ངེད་ཅག་ཐུན་མོང་གིས་«བི་མ་ལ་མི་ཏྲའི་མཛད་རྗེས་ཉུལ་བ་»ཞེས་པའི་ཉམས་ཞིབ་ཆེད་རྩོམ་དཔྱད་པ་བདུན་གྱི་བདག་ཉིད་ཅན་དེ་བྲིས།
+                    </p>
+                    <p class="mb-4">
+                        སྤྱི་ལོ་ ༢༠༡༨ ལོར་རྒྱལ་བ་དཔལ་ཡུལ་བའི་གདན་རབས་བཅུ་གཉིས་པ་༸སྐྱབས་རྗེ་ཀརྨ་སྐུ་ཆེན་རིན་པོ་ཆེས་མཁན་པོའི་ཁྲིར་མངའ་གསོལ་གནང་། སྤྱི་ལོ་ ༢༠༢༠ ལོར་ཉམས་ཞིབ་དཔྱད་རྩོམ་གྱི་དམ་བཅའི་རྒྱུགས་སྤྲོད་ཕུལ། སྤྱི་ལོ་ ༢༠༢༡ ནས་ ༢༠༢༣ བར་ལོ་གསུམ་གྱི་རིང་སྔ་འགྱུར་རྙིང་མའི་ཞིབ་འཇུག་ལྟེ་གནས་ཁང་གི་འགན་འཛིན་གྱི་ལས་ཁུར་ཞུས།
+                    </p>
+                    <p>
+                        སྤྱི་ལོ་ ༢༠༠༣ ཙམ་ནས་ད་ལྟའི་གནམ་ལོ་འདིའི་བར་བགྲང་བྱ་ཉི་ཤུ་ལྷག་གི་རིང་རྒྱུན་མ་ཆད་པར་སྔ་འགྱུར་རྡོར་གདན་སྨོན་ལམ་ཆེན་མོའི་ཞབས་ཞུའི་ལས་ཁུར་ཞུས་དང་ཞུ་མུས་དང་། ད་ལྟ་སྔ་འགྱུར་རྙིང་མའི་མདོ་རྒྱུད་བསྟན་བཅོས་གསུང་རབ་ཞིབ་འཇུག་ལྷན་ཚོགས་ཀྱི་ཉམས་ཞིབ་པའི་ལས་འགན་འཁུར་བཞིན་པའོ།།
+                    </p>
+                </div>
+            </div>
+
+            <!-- Categories -->
+            <div class="bg-white p-8 rounded-xl shadow-md">
+                <h3 class="text-xl font-bold mb-4 border-b pb-2">དབྱེ་བ་ཁག།</h3>
+                <ul class="space-y-3">
+                    <li class="flex justify-between hover:text-blue-600 cursor-pointer"><span>ཉམས་ཞིབ།</span> <span class="text-gray-400">(༧)</span></li>
+                    <li class="flex justify-between hover:text-blue-600 cursor-pointer"><span>གསུང་རབ་ཞུས་དག།</span> <span class="text-gray-400">(༡༢)</span></li>
+                    <li class="flex justify-between hover:text-blue-600 cursor-pointer"><span>བརྙན་པར་བརྩམས་ཆོས།</span> <span class="text-gray-400">(༢༥)</span></li>
+                </ul>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-900 text-gray-400 py-12 px-6">
+        <div class="container mx-auto text-center">
+            <h2 class="text-2xl font-bold text-white mb-6">འབྲེལ་གཏུག་བྱ་ཡུལ།</h2>
+            <p class="mb-2">གློག་འཕྲིན་ཁ་བྱང་།: example@email.com</p>
+            <p class="mb-4">སྔ་འགྱུར་རྙིང་མའི་མདོ་རྒྱུད་བསྟན་བཅོས་གསུང་རབ་ཞིབ་འཇུག་ལྷན་ཚོགས།</p>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-sm">
+                © ༢༠༢༤ མཁན་པོ་སྐལ་བཟང་དོན་གྲུབ་ཀྱི་སྒེར་གྱི་དྲ་ཚིགས།
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Modal -->
+    <div id="article-modal" class="fixed inset-0 bg-black bg-opacity-70 z-[100] hidden flex items-center justify-center p-4">
+        <div class="bg-white w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl p-8 relative">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-500 hover:text-black text-2xl font-bold">×</button>
+            <div id="modal-content"></div>
+        </div>
+    </div>
+
+    <script>
+        function showPost(title) {
+            const modal = document.getElementById('article-modal');
+            const content = document.getElementById('modal-content');
+            content.innerHTML = `
+                <h2 class="text-3xl font-bold mb-6 text-blue-900">${title}</h2>
+                <div class="prose prose-blue max-w-none tibetan-text text-lg">
+                    <p class="mb-4">འདིར་མཁན་པོ་སྐལ་བཟང་དོན་གྲུབ་མཆོག་གི་ཉམས་ཞིབ་དང་འབྲེལ་བའི་རྩོམ་ཡིག་གི་ནང་དོན་དངོས་གཞི་འཆར་རྒྱུ་ཡིན།</p>
+                    <p>ཁྱེད་ཀྱིས་རང་གི་རྩོམ་ཡིག་ཁག་འདིར་རིམ་བཞིན་སྤེལ་ཆོག</p>
+                </div>
+            `;
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('article-modal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+    </script>
+</body>
+</html>
