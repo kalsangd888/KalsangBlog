@@ -53,6 +53,17 @@
         .profile-img-box:hover img {
             transform: scale(1.05);
         }
+        /* Visitor Counter Styling */
+        .visitor-counter {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            border-radius: 8px;
+            padding: 5px 15px;
+            display: inline-flex;
+            align-items: center;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
     </style>
 </head>
 <body class="text-gray-800">
@@ -84,9 +95,19 @@
             <p class="text-xl opacity-90 mb-10 max-w-2xl mx-auto">
                 མཁན་པོ་སྐལ་བཟང་དོན་གྲུབ་ཀྱི་སྒེར་གྱི་ཉམས་ཞིབ་དང་རྩོམ་ཡིག་གླེང་སྟེགས།
             </p>
-            <a href="#articles" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full text-lg font-semibold transition inline-block">
-                རྩོམ་ཡིག་ཀློག་པ།
-            </a>
+            <div class="mb-10">
+                <a href="#articles" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full text-lg font-semibold transition inline-block mr-4">
+                    རྩོམ་ཡིག་ཀློག་པ།
+                </a>
+            </div>
+            <!-- Visitor Counter in Hero Section -->
+            <div class="visitor-counter text-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+                <span>དྲ་ཚིགས་ལ་ལྟ་མཁན།: <span id="visitor-count" class="font-bold">...</span></span>
+            </div>
         </div>
     </section>
 
@@ -160,7 +181,7 @@
                 <h3 class="text-xl font-bold mb-4 border-b pb-2">འབྲེལ་གཏུག།</h3>
                 <p class="text-sm text-gray-600 mb-4">གལ་སྲིད་བརྩམས་ཆོས་དང་ཉམས་ཞིབ་སྐོར་ལ་དྲི་བ་ཡོད་ཚེ་འབྲེལ་གཏུག་གནང་རོགས།</p>
                 <div class="space-y-2 text-sm">
-                    <p>📧 གློག་འཕྲིན།: kalsangd888@palyul.org</p>
+                    <p>📧 གློག་འཕྲིན།: kalsangd888@gmail.com</p>
                     <p>📍 བཞུགས་གནས།: ཐེག་མཆོག་རྣམ་གྲོལ་བཤད་སྒྲུབ་དར་རྒྱས་གླིང་།</p>
                 </div>
             </div>
@@ -172,6 +193,26 @@
             <p>© ༢༠༢༤ མཁན་པོ་སྐལ་བཟང་དོན་གྲུབ་ཀྱི་སྒེར་གྱི་དྲ་ཚིགས།</p>
         </div>
     </footer>
+
+    <script>
+        // Simple Visitor Counter Logic (using LocalStorage for demo)
+        // In a real production site, you'd use a database or a service like CountAPI
+        function updateVisitorCount() {
+            let count = localStorage.getItem('visitor_count');
+            
+            if (count === null) {
+                count = 1;
+            } else {
+                count = parseInt(count) + 1;
+            }
+            
+            localStorage.setItem('visitor_count', count);
+            document.getElementById('visitor-count').innerText = count.toLocaleString('bo-IN');
+        }
+
+        // Run when page loads
+        window.onload = updateVisitorCount;
+    </script>
 
 </body>
 </html>
