@@ -64,6 +64,22 @@
             font-size: 0.9rem;
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
+        /* Footnote Styling */
+        .footnote-ref {
+            font-size: 0.75rem;
+            vertical-align: super;
+            color: #2563eb;
+            font-weight: bold;
+            margin-left: 2px;
+            cursor: pointer;
+        }
+        .footnotes-section {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+            font-size: 0.875rem;
+            color: #475569;
+        }
     </style>
 </head>
 <body class="text-gray-800">
@@ -118,6 +134,32 @@
         <div class="lg:col-span-2 space-y-10" id="articles">
             <h2 class="text-3xl font-bold border-b-2 border-blue-500 pb-3 mb-8">རྩོམ་ཡིག་གསར་ཤོས་ཁག།</h2>
 
+            <!-- New Academic Article Style with Footnotes -->
+            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
+                <div class="p-8">
+                    <div class="flex items-center text-sm text-gray-500 mb-3">
+                        <span>༢༠༢༤། ཟླ་ ༤། ཚེས་ ༡༠།</span>
+                        <span class="mx-2">•</span>
+                        <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">དཔྱད་རྩོམ།</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">སྔ་འགྱུར་རྙིང་མའི་བཀའ་མའི་བྱུང་བ་དང་འཕེལ་རིམ་ལ་དཔྱད་པ།</h3>
+                    <p class="text-gray-600 tibetan-text mb-6">
+                        བོད་གངས་ཅན་གྱི་ལྗོངས་སུ་གསང་སྔགས་སྔ་འགྱུར་བའི་བསྟན་པ་རིན་པོ་ཆེ་འདི་ཉིད་ཇི་ལྟར་བྱུང་བའི་ཚུལ་དང་། <sup class="footnote-ref" title="Go to footnote 1">༡</sup> ཁྱད་པར་དུ་བཀའ་མའི་བརྒྱུད་པ་འཛིན་པའི་སྐྱེས་ཆེན་དག་གི་མཛད་པ་གཙོ་བོར་བཟུང་ནས་དཔྱད་པ་བགྱིས་པ་ལ། <sup class="footnote-ref" title="Go to footnote 2">༢</sup> འདིར་དེང་རབས་ཉམས་ཞིབ་ཀྱི་ལམ་སྲོལ་དང་མཐུན་པའི་སྒོ་ནས་གླེང་བར་བྱའོ།།
+                    </p>
+                    
+                    <!-- Footnotes display example -->
+                    <div class="footnotes-section">
+                        <p class="font-bold mb-2">ཞབས་མཆན།</p>
+                        <ul class="list-none space-y-1">
+                            <li>༡. བུ་སྟོན་ཆོས་འབྱུང་ལས་གསལ། ཤོག་གྲངས་ ༡༢༠།</li>
+                            <li>༢. ཉང་ཉི་མ་འོད་ཟེར་གྱི་ཆོས་འབྱུང་མེ་ཏོག་སྙིང་པོ།</li>
+                        </ul>
+                    </div>
+
+                    <button class="mt-6 text-blue-600 font-bold hover:underline">དཔྱད་རྩོམ་ཆ་ཚང་ཀློག་པ། →</button>
+                </div>
+            </article>
+
             <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
                 <div class="p-8">
                     <div class="flex items-center text-sm text-gray-500 mb-3">
@@ -128,21 +170,6 @@
                     <h3 class="text-2xl font-bold mb-4">བི་མ་ལ་མི་ཏྲའི་མཛད་རྗེས་ཉམས་ཞིབ་དང་འབྲེལ་བའི་དཔྱད་རྩོམ།</h3>
                     <p class="text-gray-600 tibetan-text mb-6">
                         སྔ་འགྱུར་རྙིང་མའི་ཞིབ་འཇུག་ལྟེ་གནས་ཁང་དུ་བྲིས་པའི་«བི་མ་ལ་མི་ཏྲའི་མཛད་རྗེས་ཉུལ་བ་»ཞེས་པའི་ཉམས་ཞིབ་ཀྱི་གལ་ཆེའི་རང་བཞིན་སྐོར་གླེང་བ།
-                    </p>
-                    <button class="text-blue-600 font-bold hover:underline">མུ་མཐུད་ཀློག་པ། →</button>
-                </div>
-            </article>
-
-            <article class="bg-white rounded-xl shadow-md overflow-hidden card-hover">
-                <div class="p-8">
-                    <div class="flex items-center text-sm text-gray-500 mb-3">
-                        <span>༢༠༢༤། ཟླ་ ༣། ཚེས་ ༡༥།</span>
-                        <span class="mx-2">•</span>
-                        <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">རིག་གནས།</span>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">སྔ་འགྱུར་བའི་མདོ་རྒྱུད་བསྟན་བཅོས་འགྱུར་ཆོས་ཞིབ་འཇུག།</h3>
-                    <p class="text-gray-600 tibetan-text mb-6">
-                        བཀའ་མ་དང་རྒྱུད་སྡེའི་བསྟན་བཅོས་རྣམས་ཀྱི་འགྱུར་དང་འབྲེལ་བའི་དེང་རབས་ཉམས་ཞིབ་ཀྱི་ལམ་སྲོལ།
                     </p>
                     <button class="text-blue-600 font-bold hover:underline">མུ་མཐུད་ཀློག་པ། →</button>
                 </div>
@@ -196,7 +223,6 @@
 
     <script>
         // Simple Visitor Counter Logic (using LocalStorage for demo)
-        // In a real production site, you'd use a database or a service like CountAPI
         function updateVisitorCount() {
             let count = localStorage.getItem('visitor_count');
             
